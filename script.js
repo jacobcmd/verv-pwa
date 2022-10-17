@@ -89,17 +89,16 @@ function shuffleAnswers(array) {
 }
 
 
-function isItRight_(answer) {
+let isItRight_ = (answer) =>{
     return answer == rightAnswer ? true : false;
 }
 
-function randomVerbo(notThisOne) {
+let randomVerbo = (notThisOne) =>{
     theOne = Math.floor(Math.random() * verbos.length);
-
     return theOne == notThisOne ? randomVerbo(notThisOne) : theOne;
 }
 
-function ponerVerbo() {
+let ponerVerbo = () => {
 
     answerRoullete = shuffleAnswers(answerRoullete);
 
